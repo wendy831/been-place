@@ -1,0 +1,58 @@
+<!-- https://github.com/seungjun-dev/been-place.git -->
+<!DOCTYPE html>
+<html style="height:100%;">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>Wherever you've been</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <!-- jQuery script -->    
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=hka5689zzr"></script>
+    <!-- 네이버 API 사용을 위한 script코드-->
+    <script type="text/javascript"
+        src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=hka5689zzr&submodules=visualization"></script>
+    <!-- 네이버 API 사용(submodule)을 위한 script코드-->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8faf6722ab0fc0b0cf40358fc66c7140&libraries=services"></script>
+    <!-- 카카오 API 사용을 위한 script코드-->
+    <!-- 부트스트랩 css/js -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <!-- 로컬 css/js -->
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body style="height:100%; margin:0px;">
+    <!-- Top Navigation Bar-->
+    <div id="topNav">
+        <span id="title">
+            장소 검색
+        </span>
+    </div>
+    <!-- End Top Navigation Bar-->
+
+    <div class="map_wrap">
+        <div id="map"></div>
+    
+        <div id="menu_wrap" class="bg_white">
+            <div class="option">
+                <div>
+                    <form onsubmit="searchPlaces(); return false;">
+                        <input type="text" id="searchInput" size="18"> 
+                    <button id="searchBtn" type="submit">검색</button> 
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <ul id="placesList"></ul>
+            <div id="pagination"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
